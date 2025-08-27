@@ -31,10 +31,8 @@ def has_pii(text):
 def main(file):
     df = pd.read_csv(file)
 
-    # check if any pii is there in row
     df["is_pii"] = df.apply(lambda row: any(has_pii(row[col]) for col in df.columns), axis=1)
 
-    # mask pii
     for c in df.columns:
         df[c] = df[c].apply(mask)
 
