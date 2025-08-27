@@ -30,7 +30,7 @@ Run test requests and verify that PII is detected and masked in the output.
 Monitor:
 Add basic logging to the plugin for any PII found and redacted (helpful for audits).
 
-Pros
+Advantages:
 Scalable: Handles high traffic since API gateways are built for performance.
 
 Low Latency: Code runs quickly, so delays are minimal for users.
@@ -39,7 +39,7 @@ Cost-Effective: No need to change every backend system.
 
 Easy Integration: Just add one module/plugin; updates are simple.
 
-Cons
+Disadvantages
 If some data bypasses the API gateway (like direct DB access), it won’t be protected.
 
 Internal audits might still be needed for legacy systems.
